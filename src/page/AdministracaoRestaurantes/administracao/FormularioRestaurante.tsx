@@ -1,9 +1,8 @@
-import { AppBar, Box, Button, Container, Link, Paper, TextField, Toolbar, Typography } from "@mui/material";
+import { Box, Button, Container, Paper, TextField, Typography } from "@mui/material";
 import { useState, useEffect } from "react";
 import { useParams } from "react-router-dom";
 import http from "../../../http";
 import IRestaurante from "../../../interfaces/IRestaurante";
-import { Link as RouterLink} from 'react-router-dom'
 
 const FormularioRestaurante = () => {
     const parametros = useParams();
@@ -34,27 +33,6 @@ const FormularioRestaurante = () => {
     }
     return (
         <>
-            <AppBar position="static">
-                <Container maxWidth="xl">
-                    <Toolbar>
-                        <Typography variant="h6">
-                            Administração
-                        </Typography>
-                        <Box sx={{display: 'flex', flexGrow: 1}}>
-                            <Link component={RouterLink} to="/admin/restaurantes">
-                                <Button sx={{my: 2, color:'white'}}>
-                                    Restaurantes
-                                </Button>
-                            </Link>
-                            <Link component={RouterLink} to="/admin/restaurantes/novo">
-                                <Button sx={{my: 2, color:'white'}}>
-                                    Novo Restaurante
-                                </Button>
-                            </Link>
-                        </Box>
-                    </Toolbar>
-                </Container>
-            </AppBar>
             <Box>
                 <Container maxWidth="lg" sx={{ mt: 1 }}>
                     <Paper sx={{ p: 2 }}>
